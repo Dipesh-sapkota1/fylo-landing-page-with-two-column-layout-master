@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+</head>
+<body>
+<header>
+  <nav class="nav-bar">
+      <div class="container nav-flex">
+        <img src="./images/logo.svg" alt="" class="header-logo">
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Sign In</a></li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<div class="hero py-3">
+  <div class="container hero-flex">
+    <div class="content">
+      <h1 class="section-heading"> All your files in one secure location, accessible anywhere.</h1>
+      <p class="lead">Fylo stores your most important files in one secure location. 
+        Access them wherever you need, share and collaborate with friends, 
+        family, and co-workers.
+      </p>
+      <form action="post" class="hero-form">
+        <input onmouseover="Fill_Placeholder()" onmouseout="Empty_Placeholder()" type="submit" value="Get started" class="btn btn-primary shadow"> 
+        <div class="input-group">
+          <input type="email" name="email" id="email-input" class="input-email shadow"  value="" placeholder="Enter your email...">
+          <span class="label">Please check your email</span>
+        </div>
+      </form>
+    </div>
+    <div>
+      <img src="./images/illustration-1.svg" alt="illustration-1">
+    </div>
+  </div>
+</div>
+<main>
+  <section class="feature py-4">
+    <div class="container feature-flex">
+      <div class="col-a">
+        <h2 class="section-heading"> Stay productive, wherever you are</h2>
+        <p class="lead">Never let location be an issue when accessing your files. Fylo has you 
+          covered for all of your file storage needs.</p>
+          <p class="lead"> Securely share files and folders with friends, family and colleagues for 
+            live collaboration. No email attachments required!
+          </p>
+          <div class="box"><a href="#">See how Fylo works</a> <img src="./images/icon-arrow.svg" alt=""></div>
+      
+          <div class="testimonial">
+            <img src="./images/icon-quotes.svg" alt="">
+            <p class="lead">  Fylo has improved our team productivity by an order of magnitude. Since 
+              making the switch our team has become a well-oiled collaboration machine.</p>
+            <div class="profile">
+              <div class="img">
+                <img src="./images/avatar-testimonial.jpg" alt="avatar">
+              </div>
+              <div>
+                <div class="name"> Kyle Burton</div>
+                <div class="position">Founder & CEO, Huddle</div>
+              </div>
+            </div>  
+          </div>
+      </div>
+      <div class="col-b">
+        <img src="./images/illustration-2.svg" alt="illustration-2">
+      </div>
+    </div>
+  </section>
+  <section class="cta py-6">
+    <div class="container cta-flex">
+      <div class="cta-content">
+        <h2 class="section-heading">Get early access today</h2>
+        <p> It only takes a minute to sign up and our free starter tier is extremely generous. 
+          If you have any questions, our support team would be happy to help you.
+        </p>
+      </div>
+      <form action="post" class="cta-form">
+        <input onmouseover="Fill_Placeholder()" onmouseout="Empty_Placeholder()" type="submit" value="Get Started For Free"  class="btn btn-cta shadow" > 
+        <div class="input-group">
+          <input type="email" name="email"  id="cta-input" class="input-email shadow"   value="" placeholder="email@example.com">
+          <span class="label">Please check your email</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="main-footer py-6">
+  <div class="container">
+    <img src="./images/footer-logo.svg" alt="" class="footer-logo">
+      <div class="footer-flex">
+        <div class="contact-info">
+          <div><img src="/images/icon-phone.svg" alt="phone"> <p> Phone: +1-543-123-4567</p></div>
+          <div><img src="./images/icon-email.svg" alt="email"> <p>example@fylo.com</p></div>
+        </div>
+
+        <div class="links">
+            <div class="col-1">
+              <div><a href="#">About Us</a></div>
+              <div><a href="#">Jobs</a></div>
+              <div><a href="#">Press</a></div>
+              <div><a href="#">Blog</a></div>
+            </div>
+          <div class="col-2">
+            <div><a href="#">Contact Us</a></div>
+            <div><a href="#">Terms</a></div>
+            <div><a href="#">Privacy</a></div>
+          </div>
+        </div>
+        
+          <div class="social">
+          <div><a href="http://www.facebook.com"><i class="fab fa-facebook"></i></a></div>
+          <div><a href="http://www.twitter.com"> <i class="fab fa-twitter"></i></a></div>
+          <div> <a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a></div>
+          </div>
+       
+      </div>
+  </div>
+</footer>
+<script>
+  // 'johnappleseed#mai.com'
+  const value = document.getElementById("email-input");
+  const cta_value = document.getElementById("cta-input");
+  function Fill_Placeholder(){
+    value.value = 'johnappleseed#mai.com';
+    cta_value.value = 'johnappleseed#mai.com';
+  } 
+   function Empty_Placeholder(){
+    value.value = '';
+    cta_value.value = '';
+   }
+</script>
+</body>
+</html>
